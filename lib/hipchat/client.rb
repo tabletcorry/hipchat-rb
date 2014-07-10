@@ -5,6 +5,8 @@ module HipChat
   class Client
     include HTTParty
 
+    default_timeout 5
+
     format :json
 
     def initialize(token, options={})

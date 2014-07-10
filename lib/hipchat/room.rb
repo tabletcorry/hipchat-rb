@@ -6,6 +6,8 @@ module HipChat
   class Room < OpenStruct
     include HTTParty
 
+    default_timeout 5
+
     format   :json
 
     def initialize(token, params)
